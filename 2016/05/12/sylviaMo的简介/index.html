@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="en-us"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>sylviaMo的简介 | Hexo</title><meta name="description"><meta name="generator" content="Hexo"><meta name="author" content="John Doe"><meta name="keywords" content="sjaak van den berg, svdb, bitcoin, crypto, payment, integration, bitcoins, wordpress, betaling, webshop, front end, design, ontwerp, developer"><meta name="HandheldFriendly" content="True"><meta name="MobileOptimized" content="320"><meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=0"><link rel="stylesheet" type="text/css" href="/styles/screen.css"><link rel="apple-touch-icon" sizes="57x57" href="/images/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/images/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/images/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/images/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/images/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/images/apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180x180.png"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png"><link rel="icon" type="image/png" sizes="160x160" href="/images/favicon-160x160.png"><link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192x192.png"><meta name="msapplication-TileColor" content="#121315"><meta name="msapplication-TileImage" content="/images/mstile-144x144.png"></head><body itemscope itemtype="https://schema.org/WebPage"><header itemscope itemtype="https://schema.org/WPHeader"><a href="/"><img src="/images/svdb.png" alt="Hexo" title="Hexo"></a><h1><a href="/" alt="Hexo" title="Hexo" itemprop="headline">Hexo</a></h1><p itemprop="description"></p><nav itemscope itemtype="https://schema.org/SiteNavigationElement"><ul><li itemprop="name"><a href="/" alt="Home" title="Home" itemprop="url">Home</a></li><li itemprop="name"><a href="/articles" alt="Articles" title="Articles" itemprop="url">Articles</a></li><li itemprop="name"><a href="/about" alt="About" title="About" itemprop="url">About</a></li></ul></nav><div class="space"></div></header><main itemscope itemtype="https://schema.org/Blog"><article class="full"><h1 itemprop="headline">sylviaMo的简介</h1><span class="post-meta">Published on<time itemprop="datePublished" datetime="2016-05-12T09:36:32.000Z"> Thursday, May 12th 2016 at 17:36</time><br>Last updated on<time itemprop="dateModified" datetime="2016-05-12T09:36:32.000Z"> Thursday, May 12th 2016 at 17:40</time></span><p>如果你厌倦了使用了第三方的博客平台，你可以考虑一下用hexo和github来搭建自己的博客</p>
+<p>用hexo来搭建github blog很简单，只需要五步~</p>
+<p>1.在github上面新建一个仓库</p>
+<p>首先我们需要在自己的github上新建一个仓库，将仓库的命名为xxx.github.io，一定要按该格式命名，否则不能搭建成功</p>
+<p>2.配置环境</p>
+<p>在使用搭建之前，我们需要配置好下面环境</p>
+<p>安装Homebrew</p>
+<p>$ ruby -e “$(curl -fsSL <a href="https://raw.githubusercontent.com/Homebrew/install/master/install" target="_blank" rel="external">https://raw.githubusercontent.com/Homebrew/install/master/install</a>)”<br>安装node.js</p>
+<p>node.js集成带有了npm</p>
+<p>$ brew install node<br>安装hexo-cli</p>
+<p>$ sudo npm install -g hexo-cli<br>3.在blog目录下，初始化hexo</p>
+<p>接下来我们需要新建一个文件夹来存放blog内容，假设我新建了一个blog文件夹，然后我cd到该路径下面，然后我们需要对该目录进行初始化，运行</p>
+<p>$ hexo init ${blog路径}</p>
+<p>（图中中间出现的报错不要在意，因为我使用了插件，提示未找到该插件）</p>
+<p>4.生成静态页面</p>
+<p>初始化好之后，我们先来看看页面是不是能正常显示打开了，运行</p>
+<p>$ hexo g<br>等同于</p>
+<p>$ hexo generate<br>注意：</p>
+<p>第一次部署的时候会因为找不到git而报错，需要安装下，再提交一次</p>
+<p>$ npm install hexo-deployer-git –save</p>
+<p>5.初始化依赖</p>
+<p>在第一次安装运行时，我们需要初始化依赖，否则后面启动服务或者生成静态界面会出错…</p>
+<p>$ npm install<br>6.启动服务</p>
+<p>然后我们启动一下服务看看，我们的博客是不是能打开了</p>
+<p>$ hexo server</p>
+<p>我们打开<a href="http://0.0.0.0:4000/看看，如果前面一切顺利的话，你就能看到你搭建成功的博客了~（注意此时打开的还不是自己的github博客地址哦，只是hexo默认配置的地址）" target="_blank" rel="external">http://0.0.0.0:4000/看看，如果前面一切顺利的话，你就能看到你搭建成功的博客了~（注意此时打开的还不是自己的github博客地址哦，只是hexo默认配置的地址）</a></p>
+<p>7.修改blog目录下的_config.yml配置文件</p>
+<p>接下来我们需要将hexo打开的博客地址改成自己的地址，打开blog目录下面的_config.yml文件，找到deploy，将部署类型改成git或者GItHub，仓库改成自己的github blog地址格式，分支改成master，例如：</p>
+<p>deploy:<br>  type: git    #部署类型<br>  repository: <a href="https://github.com/Yuzeyang/yuzeyang.github.io.git" target="_blank" rel="external">https://github.com/Yuzeyang/yuzeyang.github.io.git</a>   #部署的仓库的SSH<br>  branch: master   #部署分支,一般使用master主分支<br>8.选取喜欢的主题</p>
+<p>作为爱装逼的程序员怎么能用默认的主题呢，我们可以先在hexo主题网赚挑选一个自己喜欢的主题：hexo主题，当然你有一定的前端基础可以自己写一套主题玩玩，分享给大家</p>
+<p>9.重新部署你的静态网页</p>
+<p>修改完配置之后，我们重新部署一下，看看效果</p>
+<p>$ hexo d -g<br>等同于</p>
+<p>$ hexo deploy -generate<br>10.再刷新一下你的网页，Duang~</p>
+<p>因为首页图片加载太慢了…我换了个主题…</p>
+<p>11.上传文章</p>
+<p>你可以运行</p>
+<p>$ hexo new “新的文章标题”<br>这样会自动生成好</p>
+<p>title: Hexo搭建GitHub blog<br>date: 2016-4-29 17:00:00</p>
+<h2 id="tags-Hexo"><a href="#tags-Hexo" class="headerlink" title="tags: Hexo"></a>tags: Hexo</h2><p>或者， 把文章放到blog/source/._posts目录下面</p>
+<p>在文章的内容前面需要加上标题、时间和标签，这样才能在首页显示出你的标题，你也可以添加文章的时间和文章的tag，例如：</p>
+<p>title: Hexo搭建GitHub blog<br>date: 2016-4-29</p>
+<h2 id="tags-Hexo-1"><a href="#tags-Hexo-1" class="headerlink" title="tags: Hexo"></a>tags: Hexo</h2><p>再起一下服务，看看有没有修改成功</p>
+<p>$ hexo server<br>修改成功后，再重新部署一下</p>
+<p>$ hexo d -g<br>最后再确认一下</p>
+<p>上传成功~！</p>
+</article></main></body></html>
