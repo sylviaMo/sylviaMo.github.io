@@ -10,6 +10,11 @@
 
     <!--Description-->
     
+        <meta name="description" content="如果你厌倦了使用了第三方的博客平台，你可以考虑一下用hexo和github来搭建自己的博客
+用hexo来搭建github blog很简单，只需要五步~
+1.在github上面新建一个仓库
+首先我们需要在自己的github上新建一个仓库，将仓库的命名为xxx.github.io，一定要按该格式命名，否">
+    
 
     <!--Author-->
     
@@ -131,7 +136,53 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                
+                <p>如果你厌倦了使用了第三方的博客平台，你可以考虑一下用hexo和github来搭建自己的博客</p>
+<p>用hexo来搭建github blog很简单，只需要五步~</p>
+<p>1.在github上面新建一个仓库</p>
+<p>首先我们需要在自己的github上新建一个仓库，将仓库的命名为xxx.github.io，一定要按该格式命名，否则不能搭建成功</p>
+<p>2.配置环境</p>
+<p>在使用搭建之前，我们需要配置好下面环境</p>
+<p>安装Homebrew</p>
+<p>$ ruby -e “$(curl -fsSL <a href="https://raw.githubusercontent.com/Homebrew/install/master/install" target="_blank" rel="external">https://raw.githubusercontent.com/Homebrew/install/master/install</a>)”<br>安装node.js</p>
+<p>node.js集成带有了npm</p>
+<p>$ brew install node<br>安装hexo-cli</p>
+<p>$ sudo npm install -g hexo-cli<br>3.在blog目录下，初始化hexo</p>
+<p>接下来我们需要新建一个文件夹来存放blog内容，假设我新建了一个blog文件夹，然后我cd到该路径下面，然后我们需要对该目录进行初始化，运行</p>
+<p>$ hexo init ${blog路径}</p>
+<p>（图中中间出现的报错不要在意，因为我使用了插件，提示未找到该插件）</p>
+<p>4.生成静态页面</p>
+<p>初始化好之后，我们先来看看页面是不是能正常显示打开了，运行</p>
+<p>$ hexo g<br>等同于</p>
+<p>$ hexo generate<br>注意：</p>
+<p>第一次部署的时候会因为找不到git而报错，需要安装下，再提交一次</p>
+<p>$ npm install hexo-deployer-git –save</p>
+<p>5.初始化依赖</p>
+<p>在第一次安装运行时，我们需要初始化依赖，否则后面启动服务或者生成静态界面会出错…</p>
+<p>$ npm install<br>6.启动服务</p>
+<p>然后我们启动一下服务看看，我们的博客是不是能打开了</p>
+<p>$ hexo server</p>
+<p>我们打开<a href="http://0.0.0.0:4000/看看，如果前面一切顺利的话，你就能看到你搭建成功的博客了~（注意此时打开的还不是自己的github博客地址哦，只是hexo默认配置的地址）" target="_blank" rel="external">http://0.0.0.0:4000/看看，如果前面一切顺利的话，你就能看到你搭建成功的博客了~（注意此时打开的还不是自己的github博客地址哦，只是hexo默认配置的地址）</a></p>
+<p>7.修改blog目录下的_config.yml配置文件</p>
+<p>接下来我们需要将hexo打开的博客地址改成自己的地址，打开blog目录下面的_config.yml文件，找到deploy，将部署类型改成git或者GItHub，仓库改成自己的github blog地址格式，分支改成master，例如：</p>
+<p>deploy:<br>  type: git    #部署类型<br>  repository: <a href="https://github.com/Yuzeyang/yuzeyang.github.io.git" target="_blank" rel="external">https://github.com/Yuzeyang/yuzeyang.github.io.git</a>   #部署的仓库的SSH<br>  branch: master   #部署分支,一般使用master主分支<br>8.选取喜欢的主题</p>
+<p>作为爱装逼的程序员怎么能用默认的主题呢，我们可以先在hexo主题网赚挑选一个自己喜欢的主题：hexo主题，当然你有一定的前端基础可以自己写一套主题玩玩，分享给大家</p>
+<p>9.重新部署你的静态网页</p>
+<p>修改完配置之后，我们重新部署一下，看看效果</p>
+<p>$ hexo d -g<br>等同于</p>
+<p>$ hexo deploy -generate<br>10.再刷新一下你的网页，Duang~</p>
+<p>因为首页图片加载太慢了…我换了个主题…</p>
+<p>11.上传文章</p>
+<p>你可以运行</p>
+<p>$ hexo new “新的文章标题”<br>这样会自动生成好</p>
+<p>title: Hexo搭建GitHub blog<br>date: 2016-4-29 17:00:00</p>
+<h2 id="tags-Hexo"><a href="#tags-Hexo" class="headerlink" title="tags: Hexo"></a>tags: Hexo</h2><p>或者， 把文章放到blog/source/._posts目录下面</p>
+<p>在文章的内容前面需要加上标题、时间和标签，这样才能在首页显示出你的标题，你也可以添加文章的时间和文章的tag，例如：</p>
+<p>title: Hexo搭建GitHub blog<br>date: 2016-4-29</p>
+<h2 id="tags-Hexo-1"><a href="#tags-Hexo-1" class="headerlink" title="tags: Hexo"></a>tags: Hexo</h2><p>再起一下服务，看看有没有修改成功</p>
+<p>$ hexo server<br>修改成功后，再重新部署一下</p>
+<p>$ hexo d -g<br>最后再确认一下</p>
+<p>上传成功~！</p>
+
             </div>
 
             <!-- Comments -->
